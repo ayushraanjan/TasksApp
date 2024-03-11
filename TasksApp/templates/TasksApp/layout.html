@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "{% static 'TasksApp/style.css' %}" rel = "stylesheet">
+    <title>TasksApp</title>
+</head>
+<body class="main_body">
+    <a id="social_link" href="https://instagram.com/ayushraanjan">Follow the Creator</a>
+    <h1 id="main_heading">TasksApp</h1>
+    <h2 id="tagline">Track Your Tasks Through Our App</h2>
+    
+        {% block body %}
+
+        {% endblock %}    
+</body>
+<div class="footer">
+    <p>TasksApp Built using Django</p>
+</div>
+</html>

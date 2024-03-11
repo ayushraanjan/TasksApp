@@ -1,0 +1,57 @@
+#main_heading 
+{
+    color:blueviolet;
+    text-align:center;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+#social_link
+{
+    position: absolute;
+    top:0;
+    right:0;
+    padding-right: 10px;
+    padding-top: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+#tagline
+{
+    color:blueviolet;
+    text-align:center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+  }
+#main_form
+{
+    margin-top:30px;
+    align-self: center;
+    text-align: center;
+    font-size: 15px;
+}
+#submit_button
+{
+    margin-top:10px;
+    height:20px;
+    width:100px;
+}
+.unordered_list
+{
+    margin-left: 50%;
+    margin-right: 50%;
+    align-self: center;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}

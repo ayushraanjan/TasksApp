@@ -1,0 +1,15 @@
+{% extends "TasksApp/layout.html" %}
+
+{% block body %}
+
+<ul class="unordered_list">
+    {% for item in tasks %}
+    <li>{{item}}</li>
+    {% empty %}
+    <li>No item</li>
+    {% endfor %}
+
+ 
+
+</ul>
+{% endblock %}

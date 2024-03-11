@@ -1,0 +1,10 @@
+{% extends "TasksApp/layout.html" %}
+{% block body %}
+<form id="main_form" action="{% url 'TasksApp:add' %}" method="post">
+    {% csrf_token %}
+
+    {{form}}
+    <input id="submit_button" type="submit"> 
+
+</form>
+{% endblock %}
