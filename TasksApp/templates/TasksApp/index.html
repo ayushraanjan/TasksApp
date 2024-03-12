@@ -2,14 +2,22 @@
 
 {% block body %}
 
-<ul class="unordered_list">
+<div class="container">
+
+<ul class="myUL">
     {% for item in tasks %}
     <li>{{item}}</li>
     {% empty %}
     <li>No item</li>
-    {% endfor %}
-
- 
 
 </ul>
+
+
+    {% endfor %}
+   
+</div>
+
+<div id="links_add">
+<a href="{% url 'TasksApp:add' %}">Add New Task</a>
+</div>
 {% endblock %}
