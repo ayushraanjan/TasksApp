@@ -69,3 +69,11 @@ div.container
     
 
 }
+#main_table
+{
+    text-align:center;
+    font-size:20px;
+    font-family:Arial, Helvetica, sans-serif;
+    align-self: center;
+    margin-left: 40%;
+}

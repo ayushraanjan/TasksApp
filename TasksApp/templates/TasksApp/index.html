@@ -2,19 +2,30 @@
 
 {% block body %}
 
-<div class="container">
 
-<ul class="myUL">
-    {% for item in tasks %}
-    <li>{{item}}</li>
-    {% empty %}
-    <li>No item</li>
+<div id="main_table">
+<form action="{% url 'TasksApp:index' %}" method="post" >
+    {% csrf_token %}
 
-</ul>
-
+<table>
+    <thead>
+        <th>Items</th>
+    <th>Mark Completed</th></thead>
+    <tbody>
+        {%for item in tasks %}
+        <tr>
+            
+            <td>{{item}}</td>
+            <td><Button type="submit" name="done_task" value="{{ item }}">Done</Button></td>
+        </tr>
+        {%empty%}
+        <tr><td>-</td><td>No items today</td><td>-</td></tr>
+    
 
     {% endfor %}
-   
+</tbody>
+</table>
+</form>
 </div>
 
 <div id="links_add">

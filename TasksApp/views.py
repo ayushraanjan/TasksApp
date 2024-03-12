@@ -8,13 +8,37 @@ from django.urls import reverse
 class NewTaskForm(forms.Form):
     task = forms.CharField(label="New Task")
 
+class NewDoneForm(forms.Form):
+    done_task = forms.CharField(label="Done Task")
+
 
 def index(request):
-    if "tasks" not in request.session:
-        request.session["tasks"] = []
-    return render(request, "TasksApp/index.html",{
-        "tasks":request.session["tasks"]
-    })
+    if request.method == "POST":
+        form1 = NewDoneForm(request.POST)
+        if form1.is_valid():
+            done_task = str(form1.cleaned_data["done_task"])
+            if done_task in request.session["tasks"]:
+                request.session["tasks"].remove(done_task)
+                request.session.modified = True
+                print(f"Removed {done_task}")
+            else:
+                print(f"Error: Task {done_task} not found in the list.")
+                
+            
+        return HttpResponseRedirect(reverse("TasksApp:index"))
+    else:
+
+        
+             
+        if "tasks" not in request.session:
+            request.session["tasks"] = []
+        return render(request, "TasksApp/index.html",{
+                 
+            "tasks":request.session["tasks"]
+
+                })
+             
+    # return HttpResponse("Some error occurred")
 
 def add(request):
     if request.method == "POST":
