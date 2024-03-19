@@ -1,6 +1,6 @@
 # TasksApp
 
-This app is a Simple To Do list app like Google Task Built on Django Framework. It uses Django to render pages to the web browser. It works with sessions properly.
+This app is a To Do list app like Google Task Built on Django Framework. It uses Django to render pages to the web browser. It works with sessions properly.
 
 
 # Files
